@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Dia dos Namorados ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="shortcut icon" href="image/fav.png" type="image/x-icon">
+    <link href="dist/output.css" rel="stylesheet">
+</head>
+<body class="montserrat text-pink-900">
+    <div id="autoplayNotice" class="text-red-500 hidden">Clique no ícone de música para iniciar o som ❤️</div>
+    <div class="fixed bottom-4 right-4 z-50 bg-white rounded-full p-3 shadow-xl animate-pulse">
+        <audio id="valentinesMusic" loop>
+            <source src="static/perfect.mp3" type="audio/mpeg">
+        </audio>
+        <button id="musicToggle" class="text-pink-600 hover:text-red-600 focus:outline-none">
+            <i class="fas fa-music text-2xl"></i>
+        </button>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4 py-8">
+        <header id="home" class="text-center py-12 fade-in">
+            <div class="bg-white p-8 rounded-xl shadow-lg border border-pink-200 transform hover:scale-105 transition duration-500">
+                <h1 class="dancing-script text-5xl md:text-7xl text-pink-600 mb-6">Feliz Dia dos Namorados</h1>
+                <p class="text-xl md:text-2xl text-pink-700 mb-8">Para a pessoa mais especial do mundo ❤️</p>
+                <div class="heart animate-bounce text-4xl text-red-500">❤️</div>
+            </div>
+        </header>
+
+        <div id="navButtons" class="flex justify-between my-12">
+            <button class="nav-btn bg-pink-100 hover:bg-pink-200 text-pink-800 font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 hidden" onclick="navigate(-1)">
+                <i class="fas fa-arrow-left mr-2"></i> Voltar
+            </button>
+            <button class="nav-btn bg-pink-100 hover:bg-pink-200 text-pink-800 font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105" onclick="navigate(1)">
+                Continuar <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+
+        <section id="album" class="py-12 hidden fade-in">
+            <div class="text-center mb-12">
+                <h2 class="dancing-script text-4xl md:text-6xl text-pink-600 mb-4">Nossos Momentos</h2>
+                <p class="text-xl text-pink-700">Uma linha do tempo do nosso amor</p>
+            </div>
+            
+            <div class="timeline relative max-w-2xl mx-auto">
+                
+            </div>
+        </section>
+
+        <section id="card" class="py-12 hidden fade-in">
+            <div class="text-center mb-12">
+                <h2 class="dancing-script text-4xl md:text-6xl text-pink-600 mb-4">Cartão Especial</h2>
+                <p class="text-xl text-pink-700">Clique para abrir minha mensagem</p>
+            </div>
+            
+            <div class="flex justify-center">
+                <div id="flipCard" class="w-full max-w-md cursor-pointer card-flip" onclick="this.classList.toggle('flipped')">
+                    <div class="card-face bg-white rounded-xl p-8 shadow-lg border border-pink-200 text-center h-96 flex flex-col justify-center">
+                        <i class="fas fa-heart text-red-500 text-5xl mb-6"></i>
+                        <h3 class="dancing-script text-3xl text-pink-600 mb-4">Para Você</h3>
+                        <p class="text-pink-700">Clique para abrir</p>
+                    </div>
+                    <div class="card-face card-back bg-gradient-to-br from-pink-100 to-red-100 rounded-xl p-8 shadow-lg border border-pink-200 h-96 overflow-y-auto">
+                        <h3 class="dancing-script text-3xl text-pink-700 mb-4">Minha Princesa</h3>
+                        <div class="text-pink-800 text-left space-y-4 text-sm md:text-base">
+                            <p>Amor, ainda não tenho palavras pra descrever o quanto é bom estar ao seu lado,</p>
+                            <p>cada segundo se torna único e cada momento se torna especial para mim,</p>
+                            <p>quando estou perto de você não preciso de mais nada, e quando estou longe de você, preciso só de você.</p>
+                            <p>Podem falar que é carência, dependência emocional, mas na real não tô nem aí, porque pra mim isso é só amor o meu amor por você.</p>
+                            <p>Nunca vou esquecer do primeiro dia que a gente se conheceu de verdade aquela chuva, aquela risada, aquele vôlei... depois disso, a gente ficou conversando</p>
+                            <p>e, do nada, a cantora Mayake apareceu cantando "Bilu" kkkk. Foi engraçado, mas o seu sorriso foi algo que nunca saiu da minha cabeça.</p>
+                            <p>A frase que eu mais uso é "só se vive uma vez", então por favor, vem viver essa única vez comigo. Vamos ser felizes para sempre, porque em você eu encontrei um motivo para gostar de mim.</p>
+                            <p>A vida é engraçada, uma hora a gente nem se fala, e na outra você se torna a pessoa mais importante da minha vida. Não que eu ache isso ruim, não acho nem um pouco.</p>
+                            <p>Isso tudo é pra te falar a coisa mais importante pra mim: EU TE AMO.</p>
+                            <p>Sim, EU TE AMO.</p>
+                            <p>Mayake Paulino Macketena dos Santos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="py-12 hidden fade-in flex flex-wrap justify-center items-center gap-4 p-4">
+            <div class="text-center mb-12">
+                <h2 class="dancing-script text-4xl md:text-6xl text-pink-600 mb-4">Nossa Galeria</h2>
+                <p class="text-xl text-pink-700">Clique nas fotos para ouvir nosso som ❤️</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            </div>
+        </section>
+
+        <section id="quiz" class="py-12 hidden fade-in">
+            <div class="text-center mb-12">
+                <h2 class="dancing-script text-4xl md:text-6xl text-pink-600 mb-4">Quiz do Nosso Amor</h2>
+                <p class="text-xl text-pink-700">Vamos ver o quanto você me conhece?</p>
+            </div>
+            
+            <div id="quizContainer" class="bg-white rounded-xl shadow-lg p-6 max-w-2xl mx-auto">
+                <div id="quizProgress" class="mb-6">
+                    <div class="w-full bg-pink-200 rounded-full h-2.5">
+                        <div class="bg-pink-600 h-2.5 rounded-full" style="width: 0%"></div>
+                    </div>
+                    <p id="progressText" class="text-right text-sm text-pink-600 mt-1">Pergunta 0/20</p>
+                </div>
+                
+                <div id="quizQuestion" class="text-center p-4">
+                </div>
+                
+                <div id="quizOptions" class="grid grid-cols-1 gap-3 mb-6">
+                </div>
+                
+                <div class="text-center">
+                    <button id="nextQuestionBtn" class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-full transition-colors duration-300 hidden">
+                        Próxima Pergunta <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="poem" class="py-12 hidden fade-in">
+            <div class="text-center mb-12">
+                <h2 class="dancing-script text-4xl md:text-6xl text-pink-600 mb-4">Poema de Amor</h2>
+                <p class="text-xl text-pink-700">Palavras que vêm do coração</p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-lg p-8 max-w-2xl mx-auto transform hover:scale-105 transition duration-500">
+                <h3 class="dancing-script text-3xl text-pink-700 mb-6 text-center">Meu Amor por Você</h3>
+                <div class="poem-lines text-pink-800 text-center space-y-4">
+                    <p>Quando eu era pequeno,</p>
+                    <p>escrevia muito sobre o amor,</p>
+                    <p>como quem procura algo que nunca viu,</p>
+                    <p>mas sente que existe.</p>
+                    
+                    <p>Uma das coisas que mais me surpreendeu</p>
+                    <p>foi um texto que escrevi com 9 anos.</p>
+                    <p>Eu não sabia, mas já falava de você.</p>
+                    <p>Mesmo sem te conhecer,</p>
+                    <p>meu coração já te esperava.</p>
+
+                    <p>Assim como a bússola aponta pro norte,</p>
+                    <p>o meu coração sempre apontará para você.</p>
+
+                    <p>Hoje, você é meu lar,</p>
+                    <p>minha casa, meu mundo.</p>
+                    <p>A única pessoa que eu quero 24 horas,</p>
+                    <p>todos os dias,</p>
+                    <p>em todos os planos.</p>
+
+                    <p>A única pessoa que eu nunca quero ver partir.</p>
+                    <p>A que eu vou sempre priorizar,</p>
+                    <p>amar, proteger</p>
+                    <p>e escolher,</p>
+                    <p>todos os dias,</p>
+                    <p>para sempre.</p>
+                    
+                    <p class="dancing-script text-lg text-pink-600 mt-6">Com todo meu amor.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+<script src="static/script.js"></script>
+</body>
+</html>
